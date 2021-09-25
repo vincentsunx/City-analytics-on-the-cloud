@@ -1,0 +1,10 @@
+#   Common
+ansible_python_interpreter: /usr/bin/python3
+ansible_user: ubuntu
+ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+
+#   Working directory
+working_dir: /home/ubuntu/COMP90024_Project
+
+#   Proxy
+proxy: http://wwwproxy.unimelb.edu.au:8000/

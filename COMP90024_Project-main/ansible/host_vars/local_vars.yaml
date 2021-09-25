@@ -1,0 +1,64 @@
+# Common vars
+availability_zone: melbourne-qh2-uom
+instance_image: f8b79936-6616-4a22-b55d-0d0a1d27bceb
+instance_key_name: ccc_key
+instance_flavor: uom.mse.1c4g
+
+host_dir: inventory
+
+# Volume
+volumes:
+  - vol_name: ins1-volume
+    vol_size: 60
+    device: /dev/vdb
+    mountpoint: /data
+  - vol_name: ins2-volume
+    vol_size: 60
+    device: /dev/vdb
+    mountpoint: /data
+  - vol_name: ins3-volume
+    vol_size: 60
+    device: /dev/vdb
+    mountpoint: /data
+  - vol_name: ins4-volume
+    vol_size: 60
+    device: /dev/vdb
+    mountpoint: /data
+  
+    
+
+# Security group
+security_groups:
+  - name: couchdb-sg
+    description: "security group for CouchDB"
+    protocol: tcp
+    port_range_min: 1
+    port_range_max: 65535
+    remote_ip_prefix: 0.0.0.0/0
+
+# Instance
+instances:
+  - name: instance-1
+    security_groups:
+    - couchdb-sg
+    volume:
+      name: ins1-volume
+      size: 60
+  - name: instance-2
+    security_groups:
+    - couchdb-sg
+    volume:
+      name: ins2-volume
+      size: 60
+  - name: instance-3
+    security_groups:
+    - couchdb-sg
+    volume:
+      name: ins3-volume
+      size: 60
+  - name: instance-4
+    security_groups:
+    - couchdb-sg
+    volume:
+      name: ins4-volume
+      size: 60

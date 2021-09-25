@@ -1,0 +1,38 @@
+- name: docker proxy | create directory
+  file:
+    path: '/etc/systemd/system/docker.service.d'
+    recurse: yes
+    state: directory
+
+- name: docker proxy | add proxy settings
+  blockinfile:
+    path: /etc/systemd/system/docker.service.d/http-proxy.conf
+    create: yes
+    block: |
+        [Service]
+        Environment="HTTP_PROXY={{ proxy }}"
+        Environment="HTTPS_PROXY={{ proxy }}"
+        Environment="NO_PROXY=localhost,127.0.0.1,localaddress,172.16.0.0/12,.melbourne.rc.nectar.org.au,.storage.unimelb.edu.au,.cloud.unimelb.edu.au"
+  
+- name: docker proxy | restart service
+  systemd:
+    name: docker
+    daemon_reload: yes
+    state: restarted
+
+- name: docker container proxy | create directory
+  file:
+    path: '{{ item }}/.docker/'
+    state: directory
+  with_items:
+    - /root
+    - /home/ubuntu
+
+- name: docker container proxy | add proxy settings
+  copy:
+    src: config.json
+    dest: '{{ item }}/.docker/'
+  with_items:
+    - /root
+    - /home/ubuntu 
+

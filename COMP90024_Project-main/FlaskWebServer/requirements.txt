@@ -1,0 +1,4 @@
+Flask==1.1.2
+couchdb==1.2
+couchdb2==1.10.0
+requests~=2.25.1

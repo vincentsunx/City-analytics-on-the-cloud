@@ -1,0 +1,175 @@
+"10:48:58;INFO; * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)"
+"10:49:35;INFO;127.0.0.1 - - [25/May/2021 10:49:35] "[37mGET /main/scenario_4 HTTP/1.1[0m" 200 -"
+"10:49:35;INFO;127.0.0.1 - - [25/May/2021 10:49:35] "[37mGET /static/Scenario-4.css HTTP/1.1[0m" 200 -"
+"10:49:35;INFO;127.0.0.1 - - [25/May/2021 10:49:35] "[37mGET /static/images/pexelsphoto3388799.jpeg HTTP/1.1[0m" 200 -"
+"10:49:35;INFO;127.0.0.1 - - [25/May/2021 10:49:35] "[37mGET /static/images/pexels-photo-6146810.jpeg HTTP/1.1[0m" 200 -"
+"10:51:12;ERROR;Exception on /main/scenario_3 [GET]"
+Traceback (most recent call last):
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/urllib3/util/connection.py", line 96, in create_connection
+    raise err
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/urllib3/util/connection.py", line 86, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/urllib3/connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/urllib3/connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/http/client.py", line 1255, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/http/client.py", line 1301, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/http/client.py", line 1250, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/http/client.py", line 1010, in _send_output
+    self.send(msg)
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/http/client.py", line 950, in send
+    self.connect()
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/urllib3/connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7ff5041b9130>: Failed to establish a new connection: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/urllib3/util/retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='172.26.128.217', port=5984): Max retries exceeded with url: /scenario_3 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff5041b9130>: Failed to establish a new connection: [Errno 60] Operation timed out'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/pengyumu/Desktop/CCC/COMP90024_Project/FlaskWebServer/flaskr/index.py", line 209, in scenario_3
+    scenario_3_db = get_db('scenario_3')
+  File "/Users/pengyumu/Desktop/CCC/COMP90024_Project/FlaskWebServer/flaskr/fetchCouchDB.py", line 11, in get_db
+    g.db_name = server[db_name]
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/couchdb2.py", line 94, in __getitem__
+    return Database(self, name, check=True)
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/couchdb2.py", line 294, in __init__
+    self.check()
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/couchdb2.py", line 328, in check
+    if not self.exists():
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/couchdb2.py", line 323, in exists
+    response = self.server._HEAD(self.name, errors={404: None})
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/couchdb2.py", line 226, in _HEAD
+    response = self._session.head(self._href(segments))
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/requests/sessions.py", line 577, in head
+    return self.request('HEAD', url, **kwargs)
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='172.26.128.217', port=5984): Max retries exceeded with url: /scenario_3 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff5041b9130>: Failed to establish a new connection: [Errno 60] Operation timed out'))
+"10:51:12;INFO;127.0.0.1 - - [25/May/2021 10:51:12] "[35m[1mGET /main/scenario_3 HTTP/1.1[0m" 500 -"
+"10:51:26;ERROR;Exception on /main/scenario_2 [GET]"
+Traceback (most recent call last):
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/urllib3/util/connection.py", line 96, in create_connection
+    raise err
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/urllib3/util/connection.py", line 86, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/urllib3/connectionpool.py", line 394, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/urllib3/connection.py", line 234, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/http/client.py", line 1255, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/http/client.py", line 1301, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/http/client.py", line 1250, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/http/client.py", line 1010, in _send_output
+    self.send(msg)
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/http/client.py", line 950, in send
+    self.connect()
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/urllib3/connection.py", line 200, in connect
+    conn = self._new_conn()
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7ff5041d43a0>: Failed to establish a new connection: [Errno 60] Operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/urllib3/util/retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='172.26.128.217', port=5984): Max retries exceeded with url: /scenario_1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff5041d43a0>: Failed to establish a new connection: [Errno 60] Operation timed out'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/pengyumu/Desktop/CCC/COMP90024_Project/FlaskWebServer/flaskr/index.py", line 77, in scenario_2
+    covid_db = get_db('scenario_1')
+  File "/Users/pengyumu/Desktop/CCC/COMP90024_Project/FlaskWebServer/flaskr/fetchCouchDB.py", line 11, in get_db
+    g.db_name = server[db_name]
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/couchdb2.py", line 94, in __getitem__
+    return Database(self, name, check=True)
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/couchdb2.py", line 294, in __init__
+    self.check()
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/couchdb2.py", line 328, in check
+    if not self.exists():
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/couchdb2.py", line 323, in exists
+    response = self.server._HEAD(self.name, errors={404: None})
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/couchdb2.py", line 226, in _HEAD
+    response = self._session.head(self._href(segments))
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/requests/sessions.py", line 577, in head
+    return self.request('HEAD', url, **kwargs)
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/pengyumu/anaconda3/envs/flaskProject/lib/python3.8/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='172.26.128.217', port=5984): Max retries exceeded with url: /scenario_1 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7ff5041d43a0>: Failed to establish a new connection: [Errno 60] Operation timed out'))
+"10:51:26;INFO;127.0.0.1 - - [25/May/2021 10:51:26] "[35m[1mGET /main/scenario_2 HTTP/1.1[0m" 500 -"

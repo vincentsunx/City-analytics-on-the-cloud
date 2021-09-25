@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+    <script>
+        var flaskData = JSON.parse('{{data | tojson}}');
+    </script>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="987-654-321&nbsp;or
+456-789-321, Taxi transfers from and to&nbsp; Airport, Yellow Cab NYC, Book your trip online now">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Scenario 2</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='nicepage.css') }}" media="screen">
+<link rel="stylesheet" href="{{ url_for('static', filename='Scenario-2.css') }}" media="screen">
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='nicepage.js') }}" defer=""></script>
+    <meta name="generator" content="Nicepage 3.15.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Merriweather:300,300i,400,400i,700,700i,900,900i">
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"url": "{{ url_for('main.index') }}",
+		"logo": "{{ url_for('static', filename='images/unimelb_Icon.png') }}"
+}</script>
+    <meta property="og:title" content="Scenario 2">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#478ac9">
+    <link rel="canonical" href="{{ url_for('main.index') }}">
+    <meta property="og:url" content="{{ url_for('main.index') }}">
+  </head>
+  <body class="u-body"><header class="u-align-left u-clearfix u-gradient u-header u-header" id="sec-0bfb" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="https://unimelb.edu.au" class="u-image u-logo u-image-1" data-image-width="225" data-image-height="225" title="1" target="_blank">
+          <img src="{{ url_for('static', filename='images/unimelb_Icon.png') }}" class="u-logo-image u-logo-image-1" data-image-width="92.3923">
+        </a>
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
+            <a class="u-button-style u-custom-active-border-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</symbol>
+</defs></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-body-color u-text-hover-grey-90" href="{{ url_for('main.welcome_page') }}" style="padding: 10px 0px;">Welcome Page</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-body-color u-text-hover-grey-90" href="{{ url_for('main.scenario_1') }}" style="padding: 10px 0px;">Scenario 1</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-body-color u-text-hover-grey-90" href="{{ url_for('main.scenario_2') }}" style="padding: 10px 0px;">Scenario 2</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-body-color u-text-hover-grey-90" href="{{ url_for('main.scenario_3') }}" style="padding: 10px 0px;">Scenario 3</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-palette-1-base u-text-body-color u-text-hover-grey-90" href="{{ url_for('main.scenario_4') }}" style="padding: 10px 0px;">Scenario 4</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{{ url_for('main.welcome_page') }}" style="padding: 10px 0px;">Welcome Page</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{{ url_for('main.scenario_1') }}" style="padding: 10px 0px;">Scenario 1</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{{ url_for('main.scenario_2') }}" style="padding: 10px 0px;">Scenario 2</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{{ url_for('main.scenario_3') }}" style="padding: 10px 0px;">Scenario 3</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{{ url_for('main.scenario_4') }}" style="padding: 10px 0px;">Scenario 4</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-clearfix u-image u-section-1" id="carousel_187f" data-image-width="1980" data-image-height="1320">
+      <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout">
+          <div class="u-layout-row">
+            <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-26-lg u-size-28-xl u-size-29-md u-size-29-sm u-size-29-xs u-layout-cell-1">
+              <div class="u-container-layout u-valign-bottom u-container-layout-1">
+                <h1 class="u-custom-font u-font-lato u-text u-text-palette-5-dark-2 u-text-1">Scenario 2:<b>
+                    <br>People’s tweeting behaviours in different cities</b>
+                  <br>
+                </h1>
+              </div>
+            </div>
+            <div class="u-container-style u-image u-layout-cell u-right-cell u-shape-rectangle u-size-31-md u-size-31-sm u-size-31-xs u-size-32-xl u-size-34-lg u-image-1" data-image-width="1200" data-image-height="1167" data-animation-name="fadeIn" data-animation-duration="2000" data-animation-delay="0" data-animation-direction="">
+              <div class="u-container-layout u-container-layout-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-border-20 u-border-custom-color-7 u-clearfix u-section-2" id="sec-4a86">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-gutter-30 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-size-30 u-size-60-md">
+                <div class="u-layout-col">
+                  <div class="u-container-style u-layout-cell u-left-cell u-size-60 u-layout-cell-1">
+                    <div class="u-container-layout u-container-layout-1">
+                      <img class="u-image u-image-1" src="{{ url_for('static', filename='images/ffb01a34-58fb-ed05-9373-85c5c806880f.jpg') }}" data-image-width="800" data-image-height="533">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="u-size-30 u-size-60-md">
+                <div class="u-layout-col">
+                  <div class="u-container-style u-layout-cell u-right-cell u-size-60 u-layout-cell-2">
+                    <div class="u-container-layout u-container-layout-2">
+                      <h2 class="u-custom-font u-font-merriweather u-text u-text-1">Scenario Description</h2>
+                      <div class="u-palette-3-base u-shape u-shape-rectangle u-shape-1"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="u-text u-text-2" data-animation-name="jackInTheBox" data-animation-duration="1000" data-animation-delay="0" data-animation-direction=""><b>Do people prefer to tweet more on weekend or week day? During day time or at night? When do people write longer tweets? Is there any city where citizens are always brief when tweeting? Having those questions in mind, we start our investigation on people's tweeting behaviors. In this scenario, we focus on the feature 'created_at' which is the posting time for each tweet and length and word count for 'text'.&nbsp;&nbsp;</b>
+        </p>
+      </div>
+    </section>
+    <section class="u-clearfix u-white u-section-3" id="carousel_c2a8">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-align-center u-container-style u-custom-background u-list-item u-palette-3-base u-repeater-item u-list-item-1">
+              <div class="u-container-layout u-similar-container u-container-layout-1">
+                <div class="u-clearfix u-custom-html u-custom-html-1">
+                  <meta charset="utf-8">
+                  <meta name="viewport" content="width = device-width, initial-scale=1.0">
+                  <div class="container2">
+                    <div id="chart2"></div>
+                  </div>
+                  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+                  <script type="text/javascript"> // Chart options
+  var options2 = {
+          series: flaskData.population,
+          chart: {
+          width: 380,
+          type: 'pie',
+        },
+        labels: flaskData.population_city_name,
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }]
+        };
+        var chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
+        chart2.render(); </script>
+                </div>
+                <div class="u-container-style u-group u-radius-50 u-shape-round u-white u-group-1" data-animation-name="bounceIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">
+                  <div class="u-container-layout u-valign-middle u-container-layout-2">
+                    <p class="u-align-center u-text u-text-1"><b>Pie-chart 2: Comparison of population in different Greater Capital City</b>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-list u-list-2">
+          <div class="u-repeater u-repeater-2">
+            <div class="u-align-center u-container-style u-custom-background u-list-item u-palette-3-base u-repeater-item u-list-item-2">
+              <div class="u-container-layout u-similar-container u-container-layout-3">
+                <div class="u-clearfix u-custom-html u-custom-html-2">
+                  <meta charset="utf-8">
+                  <meta name="viewport" content="width = device-width, initial-scale=1.0">
+                  <div class="container1">
+                    <div id="chart1"></div>
+                  </div>
+                  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+                  <script type="text/javascript"> // Chart options
+    var options1 = {
+            series: flaskData.num_tweet_ct_value,
+            chart: {
+            width: 380,
+            type: 'pie',
+          },
+          labels: flaskData.num_tweet_ct_key,
+          responsive: [{
+            breakpoint: 480,
+            options: {
+              chart: {
+                width: 200
+              },
+              legend: {
+                position: 'bottom'
+              }
+            }
+          }]
+          };
+          var chart1 = new ApexCharts(document.querySelector("#chart1"), options1);
+          chart1.render(); </script>
+                </div>
+                <div class="u-container-style u-expanded-width u-group u-radius-50 u-shape-round u-white u-group-2" data-animation-name="bounceIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="Down">
+                  <div class="u-container-layout u-valign-middle u-container-layout-4">
+                    <p class="u-align-center u-text u-text-2" data-animation-name="bounceIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction=""><b>Pie-chart 1: Proportion of the number of tweet collected in different Greater Capital City</b>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-white u-section-4" id="sec-ca9c">
+      <div class="u-clearfix u-sheet u-valign-bottom u-sheet-1">
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-align-center u-container-style u-list-item u-palette-3-base u-radius-50 u-repeater-item u-shape-round u-list-item-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">
+              <div class="u-container-layout u-similar-container u-valign-bottom u-container-layout-1">
+                <div class="u-clearfix u-custom-html u-custom-html-1">
+                  <meta charset="utf-8">
+                  <meta name="viewport" content="width = device-width, initial-scale=1.0">
+                  <div class="container3">
+                    <div id="chart3"></div>
+                  </div>
+                  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+                  <script type="text/javascript"> // Chart options
+  var options3 = {
+          series: [
+          {
+            name: "Melbourne",
+            data: flaskData.Melbourne_tweet_days
+          },
+          {
+            name: "Sydney",
+            data: flaskData.Sydney_tweet_days
+          },
+          {
+            name: "Brisbane",
+            data: flaskData.Brisbane_tweet_days
+          },
+          {
+            name: "Adelaide",
+            data: flaskData.Adelaide_tweet_days
+          },
+          
+          {
+            name: "Perth (WA)",
+            data: flaskData.Perth_tweet_days
+          }
+        ],
+          chart: {
+          background:'#ffffff',
+          height: 350,
+          type: 'line',
+          dropShadow: {
+            enabled: true,
+            color: '#000',
+            top: 18,
+            left: 7,
+            blur: 10,
+            opacity: 0.2
+          },
+          toolbar: {
+            show: false
+          }
+        },
+        dataLabels: {
+          enabled: true,
+        },
+        stroke: {
+          curve: 'smooth'
+        },
+        title: {
+          text: 'How many tweets do people post each weekday in 5 regions',
+          align: 'left'
+        },
+        grid: {
+          borderColor: '#e7e7e7',
+          row: {
+            colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+            opacity: 0.5
+          },
+        },
+        markers: {
+          size: 1
+        },
+        xaxis: {
+          categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          title: {
+            text: 'Weekday'
+          }
+        },
+        yaxis: {
+          title: {
+            text: 'Number of Twitter'
+          },
+          min: 0,
+          max: 10000
+        },
+        legend: {
+          position: 'top',
+          horizontalAlign: 'right',
+          floating: true,
+          offsetY: -25,
+          offsetX: -5
+        }
+        };
+        var chart3 = new ApexCharts(document.querySelector("#chart3"), options3);
+        chart3.render(); </script>
+                </div>
+                <p class="u-text u-text-1"><b>Chart Analysis:</b>
+                  <br><b>Generally, people in Melbourne and Sydney tweet more. On Wednesday, the number of tweets in all areas reached the bottom. Especially for Sydney, there is a dramatic drop compared with adjacent days. After that, an increasing trend occurs and the peak appears on Saturday where people tweet much more than usual.&nbsp;</b>
+                  <br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-white u-section-5" id="carousel_44c5">
+      <div class="u-clearfix u-sheet u-valign-bottom u-sheet-1">
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-align-center u-container-style u-list-item u-palette-3-base u-radius-50 u-repeater-item u-shape-round u-list-item-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">
+              <div class="u-container-layout u-similar-container u-container-layout-1">
+                <div class="u-clearfix u-custom-html u-custom-html-1">
+                  <meta charset="utf-8">
+                  <meta name="viewport" content="width = device-width, initial-scale=1.0">
+                  <div class="container3">
+                    <div id="chart4"></div>
+                  </div>
+                  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+                  <script type="text/javascript"> // Chart options
+  var options4 = {
+          series: [
+          {
+            name: "Melbourne",
+            data: flaskData.Melbourne_tweet_hours
+          },
+          {
+            name: "Sydney",
+            data: flaskData.Sydney_tweet_hours
+          },
+          {
+            name: "Brisbane",
+            data: flaskData.Brisbane_tweet_hours
+          },
+          {
+            name: "Adelaide",
+            data: flaskData.Adelaide_tweet_hours
+          },
+          
+          {
+            name: "Perth (WA)",
+            data: flaskData.Perth_tweet_hours
+          }
+        ],
+          chart: {
+          background:'#ffffff',
+          height: 350,
+          type: 'line',
+          dropShadow: {
+            enabled: true,
+            color: '#000',
+            top: 18,
+            left: 7,
+            blur: 10,
+            opacity: 0.2
+          },
+          toolbar: {
+            show: false
+          }
+        },
+        dataLabels: {
+          // enabled: true,
+        },
+        stroke: {
+          curve: 'smooth'
+        },
+        title: {
+          text: 'How many tweets do people post each hour in 5 regions',
+          align: 'left'
+        },
+        grid: {
+          borderColor: '#e7e7e7',
+          row: {
+            colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+            opacity: 0.5
+          },
+        },
+        markers: {
+          size: 1
+        },
+        xaxis: {
+          categories: ['01', '02', '03', '04', '05', '06', '07','08', '09', '10', '11', '12', '13', '14','15', '16', '17', '18', '19', '20', '21','22', '23', '24'],
+          title: {
+            text: '24 Hours'
+          }
+        },
+        yaxis: {
+          title: {
+            text: 'Number of Twitter'
+          },
+          min: 0,
+          max: 2500
+        },
+        legend: {
+          position: 'top',
+          horizontalAlign: 'right',
+          floating: true,
+          offsetY: -25,
+          offsetX: -5
+        }
+        };
+        var chart4 = new ApexCharts(document.querySelector("#chart4"), options4);
+        chart4.render(); </script>
+                </div>
+                <p class="u-text u-text-1"><b>Chart Analysis:<br></b><b>After converting the time, there is a pattern that people have less time on tweeting in the morning, before lunch time;&nbsp; but tweet more at night, particularly before bed time(around midnight).&nbsp;</b>
+                  <br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-white u-section-6" id="carousel_e265">
+      <div class="u-clearfix u-sheet u-valign-bottom u-sheet-1">
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-align-center u-container-style u-list-item u-palette-3-base u-radius-50 u-repeater-item u-shape-round u-list-item-1">
+              <div class="u-container-layout u-similar-container u-container-layout-1">
+                <div class="u-clearfix u-custom-html u-custom-html-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">
+                  <meta charset="utf-8">
+                  <meta name="viewport" content="width = device-width, initial-scale=1.0">
+                  <div class="container3">
+                    <div id="chart5"></div>
+                  </div>
+                  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+                  <script type="text/javascript"> // Chart options
+  var options5 = {
+          series: [
+          {
+            name: "Melbourne",
+            data: flaskData.Melbourne_tweet_words_days
+          },
+          {
+            name: "Sydney",
+            data: flaskData.Sydney_tweet_words_days
+          },
+          {
+            name: "Brisbane",
+            data: flaskData.Brisbane_tweet_words_days
+          },
+          {
+            name: "Adelaide",
+            data: flaskData.Adelaide_tweet_words_days
+          },
+          
+          {
+            name: "Perth (WA)",
+            data: flaskData.Perth_tweet_words_days
+          }
+        ],
+          chart: {
+          background:'#ffffff',
+          height: 350,
+          type: 'line',
+          dropShadow: {
+            enabled: true,
+            color: '#000',
+            top: 18,
+            left: 7,
+            blur: 10,
+            opacity: 0.2
+          },
+          toolbar: {
+            show: false
+          }
+        },
+        dataLabels: {
+          enabled: true,
+        },
+        stroke: {
+          curve: 'smooth'
+        },
+        title: {
+          text: 'Twitter average words count on each weekday in 5 regions',
+          align: 'left'
+        },
+        grid: {
+          borderColor: '#e7e7e7',
+          row: {
+            colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+            opacity: 0.5
+          },
+        },
+        markers: {
+          size: 1
+        },
+        xaxis: {
+          categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          title: {
+            text: 'Weekday'
+          }
+        },
+        yaxis: {
+          title: {
+            text: 'Average Twitter length'
+          },
+          min: 11,
+          max: 15
+        },
+        legend: {
+          position: 'top',
+          horizontalAlign: 'right',
+          floating: true,
+          offsetY: -25,
+          offsetX: -5
+        }
+        };
+        var chart5 = new ApexCharts(document.querySelector("#chart5"), options5);
+        chart5.render(); </script>
+                </div>
+                <p class="u-text u-text-1"><b>Chart Analysis:</b>
+                  <br><b>As mentioned before, people tweet more on Saturday. However, they tend to write shorter tweets on Saturday as well. Among all, Sydney and Melbourne have relatively constant data. People in Perth are long-twitter lovers, especially on Friday.&nbsp;</b>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-white u-section-7" id="carousel_8489">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-align-center u-container-style u-list-item u-palette-3-base u-radius-50 u-repeater-item u-shape-round u-list-item-1" data-animation-name="zoomIn" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">
+              <div class="u-container-layout u-similar-container u-container-layout-1">
+                <div class="u-clearfix u-custom-html u-custom-html-1">
+                  <meta charset="utf-8">
+                  <meta name="viewport" content="width = device-width, initial-scale=1.0">
+                  <div class="container3">
+                    <div id="chart6"></div>
+                  </div>
+                  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+                  <script type="text/javascript"> // Chart options
+  var options6 = {
+          series: [
+          {
+            name: "Melbourne",
+            data: flaskData.Melbourne_tweet_words_hours
+          },
+          {
+            name: "Sydney",
+            data: flaskData.Sydney_tweet_words_hours
+          },
+          {
+            name: "Brisbane",
+            data: flaskData.Brisbane_tweet_words_hours
+          },
+          {
+            name: "Adelaide",
+            data: flaskData.Adelaide_tweet_words_hours
+          },
+          
+          {
+            name: "Perth (WA)",
+            data: flaskData.Perth_tweet_words_hours
+          }
+        ],
+          chart: {
+          background:'#ffffff',
+          height: 350,
+          type: 'line',
+          dropShadow: {
+            enabled: true,
+            color: '#000',
+            top: 18,
+            left: 7,
+            blur: 10,
+            opacity: 0.2
+          },
+          toolbar: {
+            show: false
+          }
+        },
+        dataLabels: {
+          // enabled: true,
+        },
+        stroke: {
+          curve: 'smooth'
+        },
+        title: {
+          text: 'Twitter average words in 24 hours in 5 regions',
+          align: 'left'
+        },
+        grid: {
+          borderColor: '#e7e7e7',
+          row: {
+            colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+            opacity: 0.5
+          },
+        },
+        markers: {
+          size: 1
+        },
+        xaxis: {
+          categories: ['01', '02', '03', '04', '05', '06', '07','08', '09', '10', '11', '12', '13', '14','15', '16', '17', '18', '19', '20', '21','22', '23', '24'],
+          title: {
+            text: '24 Hours'
+          }
+        },
+        yaxis: {
+          title: {
+            text: 'Average Twitter Length ',
+          },
+          min: 10,
+          max: 15
+        },
+        legend: {
+          position: 'top',
+          horizontalAlign: 'right',
+          floating: true,
+          offsetY: -25,
+          offsetX: -5
+        }
+        };
+        var chart6 = new ApexCharts(document.querySelector("#chart6"), options6);
+        chart6.render(); </script>
+                </div>
+                <p class="u-text u-text-1"><b>Chart Analysis:</b>
+                  <br><b>We cannot find any obvious trend. But it is unsurprising to see that people usually write longer tweets during the lunch break and after work time.&nbsp;</b>
+                  <br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-section-8" id="sec-876a">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-border-12 u-border-palette-3-base u-container-style u-expanded-width u-group u-radius-50 u-shape-round u-group-1" data-animation-name="pulse" data-animation-duration="2000" data-animation-delay="0" data-animation-direction="">
+          <div class="u-container-layout u-valign-bottom u-container-layout-1">
+            <h2 class="u-align-left u-text u-text-1">Analysis：<br>
+              <br>
+            </h2>
+            <p class="u-align-left u-text u-text-2"><b>Tweeting behavior is strongly influenced by people’s daily schedule. When it comes to company hours and school time, people are less active on Twitter. People tweet more and longer when it is close to or during the break time. Also, in more modern cities like Sydney and Melbourne, people spend more time on tweeting. That can be explained by the age composition in different areas. It is known that young people like to stay in metropolises and they are also the mainstream users on social media.<br>
+                <br>An interesting phenomenon is, all people like to tweet long tweets at night. At that time, people tend to be more emotional than daytime so they would be more likely to express themselves on the internet.<br></b>
+              <br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <footer class="u-align-left u-black u-clearfix u-footer u-footer" id="sec-1455"><div class="u-clearfix u-sheet u-sheet-1"></div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+        <span>Web Templates</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="https://nicepage.com/static-site-generator" target="_blank">
+        <span>Static Site Generator</span>
+      </a>. 
+    </section><span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: none; right: 20px; bottom: 20px;" class="u-back-to-top u-icon u-icon-circle u-opacity u-opacity-85 u-palette-5-base u-spacing-15" data-href="#">
+        <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg>
+        <svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg" id="svg-1d98"><path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg>
+    </span>
+  </body>
+</html>

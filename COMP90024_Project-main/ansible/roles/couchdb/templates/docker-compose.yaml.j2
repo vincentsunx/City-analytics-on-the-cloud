@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  couchdb:
+    image: couchdb
+    restart: always
+    ports:
+      - 4369:4369
+      - 5984:5984
+      - 9100:9100
+    volumes:
+      - /data/master:/opt/couchdb/data
+      - {{ db_dir }}/local.ini:/opt/couchdb/etc/local.ini
+    environment:
+      - COUCHDB_USER={{ db_user }}
+      - COUCHDB_PASSWORD={{ db_pwd }}
+      - COUCHDB_SECRET={{ cluster_cookie }}
+      - NODENAME={{ ansible_default_ipv4.address }}
+      - ERL_FLAGS=-setcookie {{ cluster_cookie }}
+    logging:
+      options:
+          max-size: 20m
+    container_name: couchdb

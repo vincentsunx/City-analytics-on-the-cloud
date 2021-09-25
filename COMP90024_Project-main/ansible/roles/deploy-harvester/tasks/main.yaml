@@ -1,0 +1,15 @@
+---
+- name: Shut down previous server
+  become:
+    yes
+  shell: docker-compose down --rmi local
+  args:
+    chdir: /home/ubuntu/COMP90024_Project/harvestor
+#
+- name: Start server
+  become:
+    yes
+  shell: docker-compose up  --build -d
+  args:
+    chdir: /home/ubuntu/COMP90024_Project/harvestor
+

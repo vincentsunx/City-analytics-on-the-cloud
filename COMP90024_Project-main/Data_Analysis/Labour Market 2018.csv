@@ -1,0 +1,6 @@
+gcc_name,unemployment_rate(15+),ste_name11,working_age_pop_15_64,youth_employment_rate_15_24,employment_rate(15-64),participation_rate(15+),gcc_code11
+Greater Sydney,4.4,New South Wales,3508500,9.6,74.1,66.9,1GSYD
+Greater Melbourne,5.5,Victoria,3349600,12.3,73.6,67.1,2GMEL
+Greater Brisbane,6,Queensland,1628300,12.5,73.9,67.9,3GBRI
+Greater Adelaide,6,South Australia,870100,14.2,72.2,63.2,4GADE
+Greater Perth,6.3,Western Australia,1372500,14.7,74.3,67.9,5GPER

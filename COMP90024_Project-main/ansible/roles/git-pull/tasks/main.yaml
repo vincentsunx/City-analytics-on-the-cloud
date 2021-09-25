@@ -1,0 +1,6 @@
+---
+  - git:
+      repo: git@gitlab.com:JerryMu/COMP90024_Project.git
+      dest: '{{ working_dir }}'
+      update: yes
+      version: master
